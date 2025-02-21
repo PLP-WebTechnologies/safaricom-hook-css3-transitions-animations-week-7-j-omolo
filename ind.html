@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Transitions & Animations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        
+        /* Button with hover transition */
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover, .btn:focus {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        
+        /* Card with hover effect */
+        .card {
+            width: 200px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Rotating loading spinner */
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #007BFF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Sliding and fading banner */
+        .banner {
+            width: 100%;
+            background-color: #ff9800;
+            color: white;
+            padding: 15px 0;
+            font-size: 20px;
+            animation: slide-fade 2s ease-in-out infinite alternate;
+        }
+        @keyframes slide-fade {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">Welcome to My Website!</div>
+    
+    <button class="btn">Hover Me</button>
+    
+    <div class="card">Hover over me!</div>
+    
+    <div class="spinner"></div>
+</body>
+</html>
